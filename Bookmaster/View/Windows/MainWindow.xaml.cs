@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Bookmaster.View.Pages;
 
 namespace Bookmaster.View.Windows
 {
@@ -51,21 +52,24 @@ namespace Bookmaster.View.Windows
 
         private void BrowseCatalogMi_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new BrowseCatalogPage());
         }
 
         private void ManageCastomersMi_Click(object sender, RoutedEventArgs e)
         {
+            MainFrame.Navigate(new ManageCustomersPage());
 
         }
 
         private void CirculationMi_Click(object sender, RoutedEventArgs e)
         {
+            MainFrame.Navigate(new CirculationPage());
 
         }
 
         private void ReportsMi_Click(object sender, RoutedEventArgs e)
         {
+            MainFrame.Navigate(new ReportsPage());
 
         }
     }

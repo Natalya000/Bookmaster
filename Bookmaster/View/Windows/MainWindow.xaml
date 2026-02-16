@@ -7,12 +7,13 @@
         mc:Ignorable="d"
         Title="Bookmaster3000" MinHeight="720" MinWidth="1280" Height="820" Width="1550" WindowStartupLocation="CenterScreen">
     <Grid>
+        <!-- коллекция строк RowDefinition-->
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <RowDefinition Height="10"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-
+        <!--меню-->
         <Menu>
             <MenuItem Header="Файл">
                 <MenuItem Name="LoginMi" Header="Вход в систему" Click="LoginMi_Click"/>
@@ -26,5 +27,7 @@
                 <MenuItem Name="ReportsMi" Header="Отчёты" Click="ReportsMi_Click"/>
             </MenuItem>
         </Menu>
+        <!-- фрэйм (принимает и отображает страницы)-->
+        <Frame Name="MainFrame" Grid.Row="2" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>
