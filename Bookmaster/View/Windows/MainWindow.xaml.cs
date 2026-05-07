@@ -23,6 +23,8 @@ namespace Bookmaster.View.Windows
         public MainWindow()
         {
             InitializeComponent();
+
+            MainFrame.Navigate(new BrowseCatalogPage());
         }
 
         private void LoginMi_Click(object sender, RoutedEventArgs e)

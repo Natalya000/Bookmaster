@@ -10,7 +10,6 @@
         <!-- коллекция строк RowDefinition-->
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="10"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <!--меню-->
