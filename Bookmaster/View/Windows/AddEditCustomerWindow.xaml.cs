@@ -29,6 +29,9 @@ namespace Bookmaster.View.Windows
             AddBtn.Visibility = Visibility.Collapsed;
             SaveBtn.Visibility = Visibility.Visible;
 
+            DataContext = selectedCustomer;
+            IDTb.Text = selectedCustomer.Id;
+
             CityCmb.ItemsSource = _cities;
         }
         public AddEditCustomerWindow()
@@ -45,12 +48,20 @@ namespace Bookmaster.View.Windows
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            try
+            {
+                App.GetContext().SaveChanges();
+                DialogResult = true;
+            }
+            catch (Exception ex)
+            {
+                FeedbackService.Error(ex);
+            }
         }
 
         private void CancelBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            DialogResult = false;
         }
 
         private void AddBtn_Click(object sender, RoutedEventArgs e)
