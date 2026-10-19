@@ -10,7 +10,7 @@ namespace Bookmaster.AppData
     public class PaginationController
     {
         private List<Book> _books; //список книг
-        private const int PAGE_SIXE = 50; // кол-во книг на одной странице
+        private const int PAGE_SIZE = 50; // кол-во книг на одной странице
 
         public int CurrentPage { get; set; } // номер текущей страницы
         public int TotalPages { get; set; } //  общее кол-во страниц

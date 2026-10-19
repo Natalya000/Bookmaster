@@ -43,7 +43,7 @@ namespace Bookmaster.View.Windows
 
             CityCmb.ItemsSource = _cities;
 
-            IDTb.Text = GenerateId();
+            IDTb.Text = GenerateInventoryNumber();
         }
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
@@ -102,9 +102,9 @@ namespace Bookmaster.View.Windows
                 }
             }
         }
-        private string GenerateId()
+        private string GenerateInventoryNumber()
         {
-            int lastId = Convert.ToInt32(App.GetContext().Customers.Max(c => c.Id).Substring(1));
+            int lastId = Convert.ToInt32(App.GetContext().InventoryNumber.Max(c => c.Id).Substring(1));
 
             ++lastId;
 
